@@ -1,0 +1,11 @@
+To avoid issues with `calc()` and percentages, consider using a more robust approach. For instance, use a JavaScript solution to calculate the values precisely before applying them to the CSS. Alternatively, carefully plan and test your `calc()` expressions, ensuring all values are correctly interpreted and applied. Or consider using alternative layout methods that don't rely on dynamic percentage calculations inside `calc()`:
+
+```css
+/* Instead of relying solely on calc for dynamic sizing, consider using Flexbox or Grid */
+div {
+  display: flex;
+  width: 50%;
+  /* ... rest of the styles ... */
+}
+```
+If the calculation must be done in CSS, ensure that all parent elements have defined widths, or that your calculations account for potential `auto` values.  Thorough testing and debugging are essential.
